@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.ico" rel="icon" />
+<title>IDALP Capital - Assets management platform</title>
+<meta name="description" content="IDALP Capital - Assets management platform ">
+
+<!-- Web Fonts
+========================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Stylesheet
+========================= -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="css/color-orange.css" />
+<link rel="stylesheet" type="text/css" href="css/custom-style.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader preloader-dark">
+	<div class="lds-ellipsis">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+<!-- Preloader End -->
+
+<div id="main-wrapper" class="oxyy-login-register">
+	<div class="container-fluid px-0">
+		<div class="row no-gutters min-vh-100"> 
+			<!-- Welcome Text
+			========================= -->
+			<div class="col-lg-6">
+				<div class="hero-wrap container-lg align-items-center h-100">
+					<div class="hero-mask "></div>
+					<div class="hero-bg hero-bg-scroll" style="background-image:url('./images/login-bg-idalp.jpg');"></div>
+					<div class="hero-content mx-auto w-100 h-100  ">
+						<div class="container d-flex flex-column h-100 padding-no-mobile ">
+							<div class="row no-gutters justify-content-start align-items-start  logo-row">
+								<div class="col-11 col-lg-5 justify-content-start align-items-start">
+									<div class="logo mt-4 mb-5"> <a class="d-flex" href="index.html" title="IDALP Capital"><img src="images/IDALPWhite-black.svg" alt="IDALP Capital"></a> </div>
+								</div>
+							</div>
+							<div class="row no-gutters  my-auto ">
+								<div class="col-11 col-lg-11 ">
+									<!-- <h1 class="text-9 upper-text font-40 font-weight-400 transform-15">
+										Invest in one or many late stage companies with <span class="font-weight-600">IDALP Capital investment vehicle! </span> -->
+</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Welcome Text End --> 
+			<!-- ======= Sucess registration Begin ========= -->
+			<!-- to show this block : remove .d-none and add .d-flex -->
+			<div class="col-lg-6 d-none flex-column align-items-center" id="sucess-block">
+				<div class="container my-auto py-5 bottom-container">
+					<div class="row">
+						<div class="wrap-right col-11 col-md-9 col-lg-9 col-xl-9 mx-auto">
+							<h3 class=" upper-text mb-2 font-40-25 text-center"><span class="font-weight-600">Thank you </span> for providing us your details. 
+							</h3>
+							<p class="short-text text-center">Our team will contact you shortly </p>
+							<a href="index.html" class="size-10 gohome-btn  text-center align-center upper-text font-weight-500 btn btn-primary my-2 width-50" type="submit" value="SIGN UP" >go to home page</a>
+						</div>
+
+					</div>
+				</div>
+			</div>			
+			<!-- ====== Sucess registration END ======= -->
+			<!-- Login Form
+			========================= -->
+			<!-- to hide this block: remove .d-flex  and add .d-none -->
+			<div class="col-lg-6 d-flex flex-column align-items-center " id="registration-block">
+				<div class="container my-auto py-5 bottom-container">
+					<div class="row">
+						<div class="wrap-right col-11 col-md-9 col-lg-9 col-xl-9 mx-auto">
+							<h3 class=" upper-text mb-2 font-40-25"><span class="font-weight-600">Join </span> waiting list</h3>
+							<p class="short-text ">Please provide your details for early access and a chance to get early bird bonus. </p>
+							<form id="loginForm" class="" method="post">
+								<div class="wrap-fields">
+										<div class="field-50">
+											<!-- add .error class for .form-group to make red border if field is incorrect-->
+											<div class="form-group form-item ">
+												<label class="text-light label-text" for="first_name">First name</label>
+												<input type="text" class="form-control enter-mail" id="first_name" required  placeholder="Enter your first name">
+												<!-- <span class="error">1</span> -->
+											</div>
+										</div>
+										<div class="field-50">
+
+											<div class="form-group form-item  ">
+												<label class="text-light label-text" for="last_name">Last name</label>
+												<input type="text" class="form-control enter-mail" id="last_name" required  placeholder="Enter your last name">
+											</div>
+										</div>
+								</div>
+								<div class="form-group form-item ">
+									<label class="text-light label-text" for="email">Email Address</label>
+									<input type="email" class="form-control enter-mail" id="email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Enter Your Email">
+								</div>
+								<div class="form-group form-item item-margin">
+									<div class="wrap-fields">
+										<!-- Select number-->
+										<div class="field-50">                      
+											<div class="form-group form-item ">
+												<label class="text-light label-text" for="phone">Phone number</label>
+												<div class="wrap-input form-control select-row">
+													<div class="select">
+														<input class="select__input" type="hidden" id="phone_code" name="">
+														<div class="select__head">+41</div>
+														<!-- codes list-->
+														<ul class="select__list" style="display: none;">
+																<li class="select__item">+1-706</li>
+																<li class="select__item">+1-876</li>
+																<li class="select__item">+1-869</li>
+																<li class="select__item">+1-868</li>
+																<li class="select__item">+1-809</li>
+																<li class="select__item">+1-787</li>
+																<li class="select__item">+1-784</li>
+
+																<li class="select__item">+1-767</li>
+																<li class="select__item">+1-758</li>
+																<li class="select__item">+1-670</li>
+																<li class="select__item">+1-664</li>
+																<li class="select__item">+1-649</li>
+																<li class="select__item">+1-473</li>
+
+																<li class="select__item">+1-441</li>
+																<li class="select__item">+1-345</li>
+
+																<li class="select__item">+1-340</li>
+																<li class="select__item">+1-284</li>
+
+																<li class="select__item">+1-268</li>
+																<li class="select__item">+1-264</li>
+																<li class="select__item">+1-246</li>
+																<li class="select__item">+1-242</li>
+																<li class="select__item">+1-441</li>
+																<li class="select__item">+1</li>
+
+																<li class="select__item">+7</li>
+																<li class="select__item">+20</li>
+
+																<li class="select__item">+27</li>
+
+																<li class="select__item">+30</li>
+																<li class="select__item">+31</li>
+																<li class="select__item">+32</li>
+																<li class="select__item">+33</li>
+																<li class="select__item">+34</li>
+																<li class="select__item">+36</li>
+																<li class="select__item">+39</li>
+																<li class="select__item">+40</li>
+
+																<li class="select__item">+41</li>
+																<li class="select__item">+43</li>
+																<li class="select__item">+44</li>
+																<li class="select__item">+45</li>
+																<li class="select__item">+46</li>
+																<li class="select__item">+47</li>
+																<li class="select__item">+48</li>
+																<li class="select__item">+49</li>
+																<li class="select__item">+51</li>
+
+																<li class="select__item">+53</li>
+																<li class="select__item">+54</li>
+																<li class="select__item">+55</li>
+																<li class="select__item">+56</li>
+																<li class="select__item">+57</li>
+																<li class="select__item">+58</li>
+																<li class="select__item">+60</li>
+
+																<li class="select__item">+61</li>
+																<li class="select__item">+62</li>
+																<li class="select__item">+63</li>
+																<li class="select__item">+64</li>
+																<li class="select__item">+65</li>
+																<li class="select__item">+66</li>
+																<li class="select__item">+81</li>
+
+																<li class="select__item">+82</li>
+																<li class="select__item">+84</li>
+																<li class="select__item">+86</li>
+																<li class="select__item">+90</li>
+																<li class="select__item">+91</li>
+																<li class="select__item">+92</li>
+																<li class="select__item">+93</li>
+																<li class="select__item">+94</li>
+																<li class="select__item">+95</li>
+																<li class="select__item">+98</li>
+																<li class="select__item">+212</li>
+																<li class="select__item">+220</li>
+																<li class="select__item">+221</li>
+																<li class="select__item">+222</li>
+																<li class="select__item">+223</li>
+																<li class="select__item">+224</li>
+																<li class="select__item">+225</li>
+																<li class="select__item">+226</li>
+																<li class="select__item">+227</li>
+																<li class="select__item">+228</li>
+																<li class="select__item">+229</li>
+																<li class="select__item">+230</li>
+																<li class="select__item">+231</li>
+																<li class="select__item">+232</li>
+																<li class="select__item">+233</li>
+																<li class="select__item">+234</li>
+																<li class="select__item">+235</li>
+																<li class="select__item">+236</li>
+																<li class="select__item">+237</li>
+																<li class="select__item">+238</li>
+																<li class="select__item">+239</li>
+																<li class="select__item">+240</li>
+																<li class="select__item">+241</li>
+																<li class="select__item">+242</li>
+																<li class="select__item">+243</li>
+
+																<li class="select__item">+244</li>
+																<li class="select__item">+245</li>
+																<li class="select__item">+246</li>
+																<li class="select__item">+247</li>
+																<li class="select__item">+248</li>
+																<li class="select__item">+249</li>
+																<li class="select__item">+250</li>
+																<li class="select__item">+251</li>
+																<li class="select__item">+252</li>
+																<li class="select__item">+253</li>
+																<li class="select__item">+254</li>
+																<li class="select__item">+255</li>
+																<li class="select__item">+256</li>
+																<li class="select__item">+257</li>
+																<li class="select__item">+258</li>
+																<li class="select__item">+260</li>
+																<li class="select__item">+261</li>
+																<li class="select__item">+262</li>
+																<li class="select__item">+263</li>
+																<li class="select__item">+264</li>
+																<li class="select__item">+265</li>
+																<li class="select__item">+266</li>
+																<li class="select__item">+267</li>
+																<li class="select__item">+268</li>
+																<li class="select__item">+269</li>
+																<li class="select__item">+298</li>
+																<li class="select__item">+299</li>
+																<li class="select__item">+350</li>
+																<li class="select__item">+351</li>
+																<li class="select__item">+352</li>
+																<li class="select__item">+353</li>
+																<li class="select__item">+354</li>
+																<li class="select__item">+355</li>
+																<li class="select__item">+356</li>
+																<li class="select__item">+357</li>
+																<li class="select__item">+358</li>
+																<li class="select__item">+359</li>
+																<li class="select__item">+370</li>
+																<li class="select__item">+371</li>
+																<li class="select__item">+372</li>
+																<li class="select__item">+374</li>
+																<li class="select__item">+375</li>
+																<li class="select__item">+376</li>
+																<li class="select__item">+377</li>
+																<li class="select__item">+378</li>
+																<li class="select__item">+380</li>
+																<li class="select__item">+381</li>
+																<li class="select__item">+385</li>
+																<li class="select__item">+386</li>
+																<li class="select__item">+387</li>
+																<li class="select__item">+389</li>
+																<li class="select__item">+420</li>
+																<li class="select__item">+421</li>
+																<li class="select__item">+500</li>
+																<li class="select__item">+501</li>
+																<li class="select__item">+502</li>
+																<li class="select__item">+503</li>
+																<li class="select__item">+504</li>
+																<li class="select__item">+505</li>
+																<li class="select__item">+506</li>
+																<li class="select__item">+507</li>
+																<li class="select__item">+508</li>
+																<li class="select__item">+509</li>
+																<li class="select__item">+590</li>
+																<li class="select__item">+591</li>
+																<li class="select__item">+592</li>
+																<li class="select__item">+593</li>
+																<li class="select__item">+594</li>
+																<li class="select__item">+595</li>
+																<li class="select__item">+596</li>
+																<li class="select__item">+597</li>
+																<li class="select__item">+598</li>
+																<li class="select__item">+599</li>
+																<li class="select__item">+670</li>
+																<li class="select__item">+672</li>
+																<li class="select__item">+673</li>
+																<li class="select__item">+674</li>
+																<li class="select__item">+675</li>
+																<li class="select__item">+676</li>
+																<li class="select__item">+678</li>
+																<li class="select__item">+679</li>
+																<li class="select__item">+681</li>
+																<li class="select__item">+682</li>
+																<li class="select__item">+683</li>
+																<li class="select__item">+684</li>
+																<li class="select__item">+685</li>
+																<li class="select__item">+686</li>
+																<li class="select__item">+687</li>
+																<li class="select__item">+688</li>
+																<li class="select__item">+689</li>
+																<li class="select__item">+690</li>
+																<li class="select__item">+691</li>
+																<li class="select__item">+692</li>
+																<li class="select__item">+850</li>
+																<li class="select__item">+852</li>
+																<li class="select__item">+853</li>
+																<li class="select__item">+855</li>
+																<li class="select__item">+856</li>
+																<li class="select__item">+880</li>
+																<li class="select__item">+886</li>
+																<li class="select__item">+960</li>
+																<li class="select__item">+961</li>
+																<li class="select__item">+962</li>
+																<li class="select__item">+963</li>
+																<li class="select__item">+964</li>
+																<li class="select__item">+965</li>
+																<li class="select__item">+966</li>
+																<li class="select__item">+967</li>
+																<li class="select__item">+968</li>
+																<li class="select__item">+969</li>
+																<li class="select__item">+971</li>
+																<li class="select__item">+972</li>
+																<li class="select__item">+973</li>
+																<li class="select__item">+974</li>
+																<li class="select__item">+976</li>
+																<li class="select__item">+977</li>
+																<li class="select__item">+992</li>
+																<li class="select__item">+993</li>
+																<li class="select__item">+994</li>
+																<li class="select__item">+995</li>
+																<li class="select__item">+996</li>
+																<li class="select__item">+998</li>
+															 
+														</ul>
+												</div>                         
+												<input type="text" class="form-control no-border enter-mail" id="phone" required  placeholder="123456789">
+												</div>
+											</div>
+										</div>
+										<!-- select-country  -->
+										<div class="field-50">
+											<div class="form-group form-item ">
+												<label class="text-light label-text" for="LastName">I am a resident of:</label>
+												<div class="wrap-input form-control select-row">
+													<div class="select select-country">
+														<input class="select__input" type="hidden" id="country" name="">
+														<div class="select__head ">Switzerland</div>
+														<ul class="select__list" style="display: none;">
+																<li class="select__item">Afghanistan</li>
+																<li class="select__item">Albania</li>
+																<li class="select__item">Algeria</li>
+																<li class="select__item">American Samoa</li>
+																<li class="select__item">Andorra</li>
+																<li class="select__item">Angola</li>
+																<li class="select__item">Anguilla</li>
+																<li class="select__item">Antigua and Barbuda</li>
+																<li class="select__item">Armenia</li>
+																<li class="select__item">Argentina</li>
+																<li class="select__item">Australia</li>
+																<li class="select__item">Austria</li>
+																<li class="select__item">Azerbaijan</li>
+																<li class="select__item">Bahamas</li>
+																<li class="select__item">Bahrain</li>
+
+																<li class="select__item">Bangladesh</li>
+																<li class="select__item">Barbados</li>
+																<li class="select__item">Belarus</li>
+																<li class="select__item">Belgium</li>
+																<li class="select__item">Belize</li>
+																<li class="select__item">Benin</li>
+																<li class="select__item">Bermuda</li>
+																<li class="select__item">Bolivia</li>
+
+																<li class="select__item">Bosnia and Herzegovina</li>
+																<li class="select__item">Botswana</li>
+																<li class="select__item">Brazil</li>
+																<li class="select__item">British Virgin Islands</li>
+																<li class="select__item">Brunei Darusalaam</li>
+																<li class="select__item">Bulgaria</li>
+																<li class="select__item">Burkina Faso</li>
+																<li class="select__item">Burundi</li>
+																<li class="select__item">Byelorussian</li>
+																<li class="select__item">Cambodia</li>
+																<li class="select__item">Cameroon</li>
+																<li class="select__item">Canada</li>
+																<li class="select__item">Cape Verde</li>
+																<li class="select__item">Cayman Islands</li>
+																<li class="select__item">Central African Republic</li>
+																<li class="select__item">Chad</li>
+																<li class="select__item">Chile</li>
+
+																<li class="select__item">China</li>
+																<li class="select__item">Christmas Island</li>
+																<li class="select__item">Cocos Islands</li>
+																<li class="select__item">Colombia</li>
+																<li class="select__item">Commonwealth of the Northern Mariana Islands</li>
+																<li class="select__item">Comoros and Mayotte Island</li>
+																<li class="select__item">Congo</li>
+																<li class="select__item">Cook Islands</li>
+																<li class="select__item">Costa Rica</li>
+																<li class="select__item">Croatia</li>
+																<li class="select__item">Cuba</li>
+																<li class="select__item">Cyprus</li>
+																<li class="select__item">Czech Republic</li>
+																<li class="select__item">Denmark</li>
+																<li class="select__item">Diego Garcia</li>
+																<li class="select__item">Djibouti</li>
+																<li class="select__item">Dominica</li>
+																<li class="select__item">Dominican Republic</li>
+																<li class="select__item">East Timor</li>
+																<li class="select__item">Ecuador</li>
+																<li class="select__item">Egypt</li>
+																<li class="select__item">El Salvador</li>
+																<li class="select__item">Equatorial Guinea</li>
+																<li class="select__item">Estonia</li>
+																<li class="select__item">Ethiopia</li>
+																<li class="select__item">Faeroe Islands</li>
+
+																<li class="select__item">Falkland Islands</li>
+																<li class="select__item">Fiji</li>
+																<li class="select__item">France</li>
+																<li class="select__item">French Antilles</li>
+																<li class="select__item">French Guiana</li>
+																<li class="select__item">French Polynesia</li>
+																<li class="select__item">Gabon</li>
+																<li class="select__item">Gambia</li>
+																<li class="select__item">Georgia</li>
+																<li class="select__item">Germany</li>
+																<li class="select__item">Ghana	</li>
+																<li class="select__item">Gibraltar</li>
+																<li class="select__item">Greece</li>
+																<li class="select__item">Greenland</li>
+																<li class="select__item">Grenada</li>
+																<li class="select__item">Guam</li>
+																<li class="select__item">Guatemala</li>
+																<li class="select__item">Guinea</li>
+																<li class="select__item">Guinea-Bissau</li>
+																<li class="select__item">Guyana</li>
+																<li class="select__item">Haiti</li>
+																<li class="select__item">Honduras</li>
+																<li class="select__item">Hong Kong</li>
+																<li class="select__item">Hungary</li>
+																<li class="select__item">Iceland</li>
+																<li class="select__item">India</li>
+																<li class="select__item">Indonesia</li>
+																<li class="select__item">Iran</li>
+																<li class="select__item">Iraq</li>
+																<li class="select__item">Irish Republic</li>
+																<li class="select__item">Israel</li>
+																<li class="select__item">Italy</li>
+																<li class="select__item">Ivory Coast</li>
+																<li class="select__item">Jamaica</li>
+																<li class="select__item">Japan</li>
+																<li class="select__item">Jordan</li>
+																<li class="select__item">Kazakhstan</li>
+																<li class="select__item">Kenya</li>
+																<li class="select__item">Kiribati Republic</li>
+																<li class="select__item">Kirg(h)izia</li>
+																<li class="select__item">Kuwait</li>
+																<li class="select__item">Laos</li>
+																<li class="select__item">Latvia</li>
+																<li class="select__item">Lebanon</li>
+																<li class="select__item">Lesotho</li>
+																<li class="select__item">Liberia</li>
+																<li class="select__item">Libya</li>
+																<li class="select__item">Liechtenstein</li>
+																<li class="select__item">Lithuania</li>
+																<li class="select__item">Luxembourg</li>
+																<li class="select__item">Macao</li>
+																<li class="select__item">Macedonia</li>
+																<li class="select__item">Madagascar</li>
+																<li class="select__item">Malawi</li>
+																<li class="select__item">Malaysia</li>
+																<li class="select__item">Maldives</li>
+																<li class="select__item">Mali</li>
+																<li class="select__item">Malta</li>
+																<li class="select__item">Marshall Islands</li>
+																<li class="select__item">Martinique</li>
+																<li class="select__item">Mauritania</li>
+																<li class="select__item">Mauritius</li>
+																<li class="select__item">Mexico</li>
+																<li class="select__item">Micronesia</li>
+																<li class="select__item">Monaco</li>
+																<li class="select__item">Mongolia</li>
+																<li class="select__item">Montserrat</li>
+																<li class="select__item">Morocco</li>
+																<li class="select__item">Mozambique</li>
+																<li class="select__item">Myanmar</li>
+																<li class="select__item">Namibia</li>
+																<li class="select__item">Nauru</li>
+																<li class="select__item">Nepal</li>
+																<li class="select__item">Netherlands</li>
+																<li class="select__item">Netherlands Antilles</li>
+																<li class="select__item">New Caledonia</li>
+																<li class="select__item">New Zealand</li>
+																<li class="select__item">Nicaragua</li>
+																<li class="select__item">Niger</li>
+																<li class="select__item">Nigeria</li>
+																<li class="select__item">Niue</li>
+																<li class="select__item">Norfolk Island</li>
+																<li class="select__item">North Korea</li>
+																<li class="select__item">North Yemen</li>
+																<li class="select__item">Northern Mariana Islands</li>
+																<li class="select__item">Norway</li>
+																<li class="select__item">Oman</li>
+
+																<li class="select__item">Panama</li>
+																<li class="select__item">Pakistan</li>
+																<li class="select__item">Papua New Guinea</li>
+																<li class="select__item">Paraguay</li>
+																<li class="select__item">Peru</li>
+																<li class="select__item">Philippines</li>
+																<li class="select__item">Poland</li>
+																<li class="select__item">Portugal</li>
+																<li class="select__item">Puerto Rico</li>
+																<li class="select__item">Qatar</li>
+																<li class="select__item">Republic of San Marino</li>
+																<li class="select__item">Reunion	</li>
+																<li class="select__item">Romania</li>
+																<li class="select__item">Russia</li>
+																<li class="select__item">Rwandese Republic</li>
+																<li class="select__item">Saint Helena and Ascension Island</li>
+																<li class="select__item">Saint Pierre et Miquelon</li>
+																<li class="select__item">San Marino</li>
+																<li class="select__item">Sao Tome e Principe</li>
+																<li class="select__item">Saudi Arabia</li>
+																<li class="select__item">Senegal</li>
+																<li class="select__item">Seychelles</li>
+																<li class="select__item">Sierra Leone</li>
+																<li class="select__item">Singapore</li>
+																<li class="select__item">Slovakia</li>
+																<li class="select__item">Slovenia</li>
+																<li class="select__item">Solomon Islands</li>
+																<li class="select__item">South Africa</li>
+																<li class="select__item">South Korea</li>
+																<li class="select__item">South Yemen</li>
+																<li class="select__item">Spain</li>
+																<li class="select__item">Sri Lanka</li>
+																<li class="select__item">St.Kitts and Nevis</li>
+																<li class="select__item">St.Lucia</li>
+																<li class="select__item">St.Vincent and the Grenadines</li>
+																<li class="select__item">Sudan</li>
+																<li class="select__item">Suriname</li>
+																<li class="select__item">Svalbard and Jan Mayen Islands</li>
+																<li class="select__item">Swaziland</li>
+																<li class="select__item">Sweden</li>
+																<li class="select__item">Switzerland</li>
+																<li class="select__item">Syria</li>
+																<li class="select__item">Ta(d)jikistan</li>
+																<li class="select__item">Taiwan</li>
+																<li class="select__item">Tanzania</li>
+																<li class="select__item">Thailand</li>
+																<li class="select__item">Togolese Republic</li>
+																<li class="select__item">Tokelau</li>
+																<li class="select__item">Tonga</li>
+																<li class="select__item">Trinidad and Tobago</li>
+																<li class="select__item">Tunisia</li>
+																<li class="select__item">Turkey</li>
+																<li class="select__item">Turkmenistan</li>
+																<li class="select__item">Turks & Caicos Islands</li>
+																<li class="select__item">Tuvalu</li>
+																<li class="select__item">US Virgin Islands</li>
+																<li class="select__item">Uganda</li>
+																<li class="select__item">Ukraine</li>
+																<li class="select__item">United Arab Emirates</li>
+																<li class="select__item">United Kingdom</li>
+																<li class="select__item">Uruguay</li>
+																<li class="select__item">USA</li>
+																<li class="select__item">Uzbekistan</li>
+																<li class="select__item">Vanuatu</li>
+																<li class="select__item">Vatican City</li>
+																<li class="select__item">Venezuela</li>
+																<li class="select__item">Vietnam</li>
+																<li class="select__item">Wallis and Futuna Islands</li>
+																<li class="select__item">Western Sahara</li>
+																<li class="select__item">Western Samoa</li>
+																<li class="select__item">Yugoslavia</li>
+																<li class="select__item">Zaire</li>
+																<li class="select__item">Zambia</li>
+																<li class="select__item">Zimbabwe</li>
+														</ul>
+												</div>
+											</div>
+										</div>
+									</div>								
+							</div>
+							<!-- Checkbox -->
+							<div class="check-wrap">
+								<div class="checkbox">
+									<label class="custom-checkbox">
+										<input type="checkbox" required name="agree" value="agree">
+										<div class="check-text">
+											<p class="checkbox-text"> 
+												<span class="checkbox-bold">
+													I qualify as the equivalent of an "Accredited/Professional Investor" in my country.
+												</span> 
+												 By clicking the button below you acknowledge our <a href="" class="privacy-link"> Privacy Policy  </a> 
+										 </p>
+										</div>                   
+									</label>
+								</div> 
+								</div>							 
+								<div class="alert alert-danger my-2 d-none align-items-right" role="alert">
+								</div>
+								<button class="size-14 upper-text font-weight-500 btn btn-primary my-2 width-100" type="submit" value="SIGN UP" onclick="sendRegister();">SIGN UP</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Login Form End --> 
+		</div>
+	</div>
+</div>
+<!-- Bottom text-block -->
+<div class="bottom-text-block">
+	<div class="container-lg">
+		<div class="disclosure-wrap">
+			<p class="disclosure disclosure-header">
+				disclosure
+			</p>
+			<div class="disclosure ">
+				<p class="disclosure-part">
+					THE INFORMATION IN THIS PRESENTATION AND THE PROSPECTUS OF IDALP CAPITAL SARL (FUND) NOT COMPLETE AND MAY BE CHANGED. WE MAY NOT SELL THE FUND’S SECURITIES UNTIL THE REGISTRATION STATEMENT FILED ON LOCAL SECURITIES. 
+				</p>
+				<p class="disclosure-part">
+					THIS PRESENTATION IS NOT AN OFFER TO SELL THESE SECURITIES AND IS NOT SOLICITING AN OFFER TO BUY THESE SECURITIES IN ANY STATE WHERE THE OFFER OR SALE IS NOT PERMITTED. 
+				</p>			 
+			</div>
+			<div class="disclosure">
+				<p class="disclosure-part">
+					INVESTORS SHOULD CAREFULLY CONSIDER THE INVESTMENT OBJECTIVES, RISKS, CHARGES AND EXPENSES OF THE FUND BEFORE INVESTING. 
+				</p>
+				<p class="disclosure-part">
+					QUESTIONS CAN BE REQUESTED BY EMAILING <a href="mailto:hi@idalpcapital.com"> HI@IDALPCAPITAL.COM </a> 
+					AND SHOULD BE READ CAREFULLY BEFORE INVESTING
+				</p>
+				<p class="disclosure-part">
+					ALL INVESTING INVOLVES RISKS, AND PAST PERFORMANCE IS NO GUARANTEE OF FUTURE RESULTS.
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<!-- Script --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+<!--  Script for pretty select and send form -->
+<script>
+	$('.select').on('click', '.select__head', function () {
+			if ($(this).hasClass('open')) {
+					$(this).removeClass('open');
+					$(this).next().fadeOut();
+			} else {
+					$('.select__head').removeClass('open');
+					$('.select__list').fadeOut();
+					$(this).addClass('open');
+					$(this).next().fadeIn();
+			}
+	});
+
+	$('.select').on('click', '.select__item', function () {
+			$('.select__head').removeClass('open');
+			$(this).parent().fadeOut();
+			$(this).parent().prev().text($(this).text());
+			$(this).parent().prev().prev().val($(this).text());
+	});
+
+	$(document).click(function (e) {
+			if (!$(e.target).closest('.select').length) {
+					$('.select__head').removeClass('open');
+					$('.select__list').fadeOut();
+			}
+	});
+
+	
+	function sendRegister(e){		
+
+			if($('#first_name').val()==""){
+
+			}else if($('#last_name').val()==""){
+				
+			}else if($('#email').val()==""){
+				
+			}else if($('#phone_code').val()==""){
+
+			}else if($('#phone').val()==""){
+				
+			}else if($('#country').val()==""){
+				
+			}else{
+				var first_name = $('#first_name').val();
+				var last_name = $('#last_name').val();
+				var email = $('#email').val();
+				var phone_code = $('#phone_code').val();
+				var phone = phone_code+$('#phone').val();
+				var country = $('#country').val();
+				
+
+				$.ajax({ // отправка данных в php
+					url: '/controllers/registration.php',        
+					method: 'post',             
+					dataType: 'html',          
+					data: {
+						registration: "true",
+						first_name: first_name,
+						last_name: last_name,
+						email: email,
+						phone_code: phone_code,
+						phone: phone,
+						country: country
+						
+					},    
+					success: function(data){   
+							alert(data);
+					}
+				});  
+			}
+		}
+
+	// after sucess registration : 
+	//$('#sucess-block').removeClass('d-none').addClass("d-flex");
+	//$('#registration-block').addClass('d-none').removeClass("d-flex"); 
+
+</script>
+
+<script src="js/auth.js"></script>
+<script src="js/validation.js"></script>
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '431566244989972');
+	fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=431566244989972&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</body>
+</html>

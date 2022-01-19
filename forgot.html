@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.ico" rel="icon" />
+<title>IDALP Capital - Assets management platform</title>
+<meta name="description" content="IDALP Capital - Assets management platform">
+<meta name="author" content="harnishdesign.net">
+
+<!-- Web Fonts
+========================= -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+<!-- Stylesheet
+========================= -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="css/color-orange.css" />
+<link rel="stylesheet" type="text/css" href="css/custom-style.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader preloader-dark">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End -->
+
+<div id="main-wrapper" class="oxyy-login-register">
+  <div class="container-fluid px-0">
+    <div class="row no-gutters min-vh-100"> 
+      <!-- Welcome Text
+      ========================= -->
+      <div class="col-lg-6">
+        <div class="hero-wrap d-flex align-items-center h-100">
+          <div class="hero-mask "></div>
+          <div class="hero-bg hero-bg-scroll" style="background-image:url('./images/forgot-bg-idalp.jpg');"></div>
+          <div class="hero-content mx-auto w-100 h-100">
+            <div class="container d-flex flex-column h-100 ">
+              <div class="row no-gutters justify-content-start align-items-start logo-row ">
+                <div class="col-11 col-lg-5 justify-content-start align-items-start ">
+                  <div class="logo mt-4 mb-5"> 
+                    <a class="d-flex" href="index.html" title="Oxyy">
+                      <img src="images/IDALPWhite-black.svg" alt="IDALP Capital" >
+                    </a>
+                   </div>
+                </div>
+              </div>
+              <div class="row no-gutters mt-3 my-auto">
+                <div class="col-11 col-lg-11 ">
+                  <h1 class="text-9 upper-text font-40 font-weight-400 transform-15 ">
+                    <span class="font-weight-700">Don't worry</span>,
+                     We are here help you to recover your password.
+                    </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Welcome Text End --> 
+      
+      <!-- Forgot Password Form
+      ========================= -->
+      <div class="col-lg-6 d-flex flex-column align-items-center ">
+        <div class="container my-auto py-5 bottom-container">
+          <div class="row">
+            <div class="wrap-right col-11 col-md-8 col-lg-9 col-xl-9 mx-auto">
+             
+              <h3 class=" mb-1 upper-text font-40-25 ">Forgot password?</h3>
+              <p class="text-muted mb-4">Enter the email address associated with your account.</p>
+              <form id="forgotForm" class=""  method="post">
+                <div class="form-group">
+                  <label class="text-light" for="emailAddress">Email Adress</label>
+                  <input type="email" class="form-control mb-4" id="emailAddress" required placeholder="Enter your email">
+                </div>
+
+                <div id="message-info" class="alert alert-primary my-2 d-none" role="alert">
+                 
+                </div>
+                <div id="message-error" class="alert alert-danger my-2 d-none" role="alert">
+                 
+                </div>
+
+
+                <button class="mb-5 size-14 upper-text font-weight-500 btn btn-primary my-2 width-100" type="submit">Continue</button>
+
+
+              </form>
+              <p class="text-2 return-text text-center">Return to <a class="btn-link font-weight-500" href="login.html">Login</a></p>
+             
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Forgot Password Form End --> 
+    </div>
+  </div>
+</div>
+
+<!-- Script --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

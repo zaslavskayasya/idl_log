@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.ico" rel="icon" />
+<title>IDALP Capital - Assets management platform</title>
+<meta name="description" content="IDALP Capital - Assets management platform ">
+
+<!-- Web Fonts
+========================= -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+<!-- Stylesheet
+========================= -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="css/color-orange.css" />
+<link rel="stylesheet" type="text/css" href="css/custom-style.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader preloader-dark">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End -->
+
+<div id="main-wrapper" class="oxyy-login-register">
+  <div class="container-fluid px-0">
+    <div class="row no-gutters min-vh-100"> 
+      <!-- Welcome Text
+      ========================= -->
+      <div class="col-lg-6">
+        <div class="hero-wrap d-flex align-items-center h-100">
+          <div class="hero-mask "></div>
+          <div class="hero-bg hero-bg-scroll" style="background-image:url('./images/reset-bg-idalp.jpg');"></div>
+          <div class="hero-content mx-auto w-100 h-100">
+            <div class="container d-flex flex-column h-100">
+              <div class="row no-gutters justify-content-start align-items-start logo-row">
+                <div class="col-11 col-lg-5 justify-content-start align-items-start">
+                  <div class="logo mt-4 mb-5"> <a class="d-flex" href="index.html" title="IDALP Capital"><img src="images/IDALPWhite-black.svg" alt="IDALP Capital"></a> </div>
+                </div>
+              </div>
+              <div class="row no-gutters mt-3 my-auto ">
+                <div class="col-11 col-lg-11  justify-content-start align-items-start">
+                  <h1 class="text-9 upper-text font-40 font-weight-400 transform-15">
+                    <span class="font-weight-700">We care </span> about your account security.</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Welcome Text End --> 
+      
+      <!-- Login Form
+      ========================= -->
+      <div class="col-lg-6 d-flex flex-column align-items-center ">
+        <div class="container my-auto py-5 bottom-container">
+          <div class="row">
+            <div class="wrap-right col-11 col-md-9 col-lg-9 col-xl-9 mx-auto">
+              <h3 class=" mb-1 upper-text font-40 new-pass">
+                <span class="font-weight-700"> New </span> Password</h3>
+             
+              <!-- <p class="text-cente"><img class="img-fluid" src="images/otp-icon-light.png" alt="verification"></p> -->
+              <p class="text-light mb-4">Please enter the new password to finalize your account.</p>
+              <form id="resetForm" class="" method="post">
+               
+                <div class="form-group">
+                  <label class="text-light" for="newPassword">New password</label>
+                  <input type="password" class=" mb-4 form-control" id="newPassword" required placeholder="Enter Password">
+                </div>
+               
+
+                <div class="alert alert-danger my-2  d-none" id="message-error" role="alert">
+                 
+                </div>
+
+                <button class="size-14 upper-text font-weight-500 btn btn-primary my-2 width-100" type="submit">Save and Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Login Form End --> 
+    </div>
+  </div>
+</div>
+
+<!-- Script --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+<script src="js/auth.js"></script>
+
+
+</body>
+</html>

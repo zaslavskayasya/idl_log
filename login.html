@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.ico" rel="icon" />
+<title>IDALP Capital - Assets management platform</title>
+<meta name="description" content="IDALP Capital - Assets management platform ">
+
+<!-- Web Fonts
+========================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Stylesheet
+========================= -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="css/color-orange.css" />
+<link rel="stylesheet" type="text/css" href="css/custom-style.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader preloader-dark">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End -->
+
+<div id="main-wrapper" class="oxyy-login-register">
+  <div class="container-fluid px-0">
+    <div class="row no-gutters min-vh-100"> 
+      <!-- Welcome Text
+      ========================= -->
+      <div class="col-lg-6">
+        <div class="hero-wrap container-lg align-items-center h-100">
+          <div class="hero-mask "></div>
+          <div class="hero-bg hero-bg-scroll" style="background-image:url('./images/login-bg-idalp.jpg');"></div>
+          <div class="hero-content mx-auto w-100 h-100  ">
+            <div class="container d-flex flex-column h-100 padding-no-mobile ">
+              <div class="row no-gutters justify-content-start align-items-start  logo-row">
+                <div class="col-11 col-lg-5 justify-content-start align-items-start">
+                  <div class="logo mt-4 mb-5"> <a class="d-flex" href="index.html" title="IDALP Capital"><img src="images/IDALPWhite-black.svg" alt="IDALP Capital"></a> </div>
+                </div>
+              </div>
+              <div class="row no-gutters  my-auto ">
+                <div class="col-11 col-lg-11 ">
+                  <h1 class="text-9 upper-text font-40 font-weight-400 transform-15">
+                    Invest in one or many late stage companies with <span class="font-weight-600">IDALP Capital investment vehicle! </span>
+</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Welcome Text End --> 
+      
+      <!-- Login Form
+      ========================= -->
+      <div class="col-lg-6 d-flex flex-column align-items-center ">
+        <div class="container my-auto py-5 bottom-container">
+          <div class="row">
+            <div class="wrap-right col-11 col-md-9 col-lg-9 col-xl-9 mx-auto">
+              <h3 class=" upper-text mb-4 font-40-25"><span class="font-weight-600">Log Into</span> Your Investment Account</h3>
+             
+              <form id="loginForm" class="" method="post">
+                <div class="form-group form-item ">
+                  <label class="text-light" for="emailAddress">Email Address</label>
+                  <input type="email" class="form-control enter-mail" id="emailAddress" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Enter Your Email">
+                  <!-- <span class="error">1</span> -->
+                </div>
+                <div class="form-group form-item item-margin">
+                  <label class="text-light" for="loginPassword">Password</label>
+                  <a class="size-12 btn-link font-weight-400 float-right text-2" href="forgot.html">Forgot Password ?</a>
+                  <input type="password" class="form-control" id="loginPassword" required placeholder="Enter Password">
+                  <!-- <span class="error">1</span> -->
+                </div>
+               
+                <div class="alert alert-danger my-2 d-none align-items-right" role="alert">
+                 </div>
+                <button class="size-14 upper-text font-weight-500 btn btn-primary my-2 width-100" type="submit">Log in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Login Form End --> 
+    </div>
+  </div>
+</div>
+
+<!-- Script --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+<script src="js/auth.js"></script>
+<script src="js/validation.js"></script>
+
+</body>
+</html>
